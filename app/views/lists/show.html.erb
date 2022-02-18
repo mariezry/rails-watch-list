@@ -1,0 +1,11 @@
+<h1><%= @list.name %></h1>
+
+<br>
+<%= simple_form_for @list do |f| %>
+  <%= f.input :name, placeholder: "Add your name list here..." %>
+  <%= f.submit "Ajouter un movie", class: "btn btn-primary" %>
+<% end %>
+<br>
+
+<%= link_to "Return to the lists", lists_path, class: 'btn btn-primary' %>
+<%= link_to "Delete a list", list_path(@list)%>
